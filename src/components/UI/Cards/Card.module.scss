@@ -1,0 +1,121 @@
+.card{
+  box-sizing: border-box;
+  width: 282px;
+  height: 254px;
+  border-radius: 16px;
+  background-color: white;
+  font-size: 16px;
+  line-height: 26px;
+  padding:20px;
+  margin: 0 auto;
+}
+.content{
+  width: 242px;
+  height:214px;
+  margin:0 auto;
+}
+.name{
+  /*margin-top: 20px;
+  margin-bottom: 20px;*/
+  padding: 0;
+  position:relative;
+  top:-8px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.description{
+  position:relative;
+  top:-6px;
+}
+.email{
+  position:relative;
+  top:-6px;
+}
+.phoneNumber{
+  position:relative;
+  top:-6px;
+}
+//Showing text with hover
+.hovertext {
+  position: relative;
+  top:-6px;
+}
+.hovertext:hover{
+  cursor:pointer;
+}
+
+.hovertext:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  transition: opacity 1s ease-in-out;
+
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 110%;
+}
+
+.hovertext:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media only screen and (min-width: 360px){
+.card{
+  box-sizing: border-box;
+  width: 328px;
+  height: 254px;
+  border-radius: 16px;
+  background-color: white;
+  font-size: 16px;
+  line-height: 26px;
+  padding:20px;
+  margin: 0 auto;
+}
+}
+@media only screen and (min-width: 768px){
+.card{
+  box-sizing: border-box;
+  width: 344px;
+  height: 254px;
+  border-radius: 16px;
+  background-color: white;
+  font-size: 16px;
+  line-height: 26px;
+  padding:20px;
+  margin: 0 auto;
+}
+}
+@media only screen and (min-width: 1024px){
+.card{
+  box-sizing: border-box;
+  width: 282px;
+  height: 254px;
+  border-radius: 16px;
+  background-color: white;
+  font-size: 16px;
+  line-height: 26px;
+  padding:20px;
+  margin: 0 auto;
+}
+}
+@media only screen and (min-width: 2560px){
+.card{
+  box-sizing: border-box;
+  width: 370px;
+  height: 254px;
+  border-radius: 16px;
+  background-color: white;
+  font-size: 16px;
+  line-height: 26px;
+  padding:20px;
+  margin: 0 auto;
+}
+}

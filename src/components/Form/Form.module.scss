@@ -1,0 +1,152 @@
+.title{
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 400;
+  margin-bottom: 50px;
+  position:relative;
+  top:-50px;
+}
+.container{
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+
+/*.form{
+  height: 380px;
+  width: 567px;
+  margin: 0 auto;
+}*/
+.input{
+  position:absolute;
+}
+.radioButton{
+  line-height: 25px;
+  font-size: 16px;
+}
+.titleForRadioForm{
+  line-height: 25px;
+  font-size: 16px;
+  margin-bottom: 11px;
+}
+.radioForm{
+  height: auto;
+  width: 100%;
+  position:relative;
+  left:280px;
+  text-align: left;
+}
+.FileInput_file__D3yNG{
+  position:absolute;
+  left:-100px;
+}
+@media only screen and (min-width: 360px){
+  .container{
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+    position:relative;
+    top:-83px;
+}
+  .title{
+  width:328px;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .form{
+  width:328px;
+  height:567px;
+  position:relative;
+  bottom:50px;
+  text-align: left;
+  margin:0 auto;
+}
+.radioForm{
+  height: auto;
+  width: 328px;
+  position:relative;
+  left:5px;
+  text-align: left;
+}
+.button{
+  position:relative;
+  button:25px;
+}
+}
+@media only screen and (min-width: 768px){
+  .title{
+  width:704px;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+    margin-bottom: 50px;
+  }
+  .form{
+  width:380px;
+  height:567px;
+  position:relative;
+  bottom:50px;
+  text-align: left;
+  margin:0 auto;
+}
+.radioForm{
+  height: auto;
+  width: 380px;
+  position:relative;
+  left:0px;
+  text-align: left;
+}
+}
+@media only screen and (min-width: 1024px){
+   .title{
+  width:100%;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+    margin-bottom: 50px;
+  }
+    .form{
+  width:380px;
+  height:567px;
+  position:relative;
+  bottom:50px;
+  text-align: left;
+  margin:0 auto;
+}
+.radioForm{
+  height: auto;
+  width: 380px;
+  position:relative;
+  left:0px;
+  text-align: left;
+}
+}
+@media only screen and (min-width: 2560px){
+  .title{
+  width:100%;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+    margin-bottom: 50px;
+  }
+    .form{
+  width:380px;
+  height:567px;
+  position:relative;
+  bottom:50px;
+  text-align: left;
+  margin:0 auto;
+}
+.radioForm{
+  height: auto;
+  width: 380px;
+  position:relative;
+  left:50px;
+  text-align: left;
+}
+}
+

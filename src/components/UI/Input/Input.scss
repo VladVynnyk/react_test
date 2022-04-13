@@ -1,0 +1,111 @@
+div.input-block {
+  position: relative;
+}
+div.input-block input {
+  font-weight: 500;
+  font-size: 16px;
+  color: #495055;
+  width: 350px;
+  height: 52px;
+  padding: 0px;
+  border-radius: 5px;
+  border: 1px solid  #D9D9D9;
+  outline:none;
+  margin-bottom: 50px;
+  background-color: #F8F8F8;
+}
+/*div.input-block[data-error] input{
+  border:2px solid darkred;
+}*/
+div.input-block span.placeholder {
+  position: absolute;
+  margin: 17px 0;
+  padding: 0 4px;
+  font-family: Nunito;
+  color:  #6c757d;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  top: 0;
+  left: 285px;
+  top: -1px;
+  transition: all 0.2s;
+  transform-origin: 0% 0%;
+  background: none;
+  pointer-events: none;
+}
+div.input-block input:valid + span.placeholder,
+div.input-block input:focus + span.placeholder {
+  transform: scale(0.8) translateY(-30px);
+  background: #F8F8F8;
+}
+div.input-block input:focus{
+  color: #284B63;
+  border-color: #284B63;
+}
+div.input-block input:focus + span.placeholder {
+  color: #284B63;
+}
+@media only screen and (min-width: 360px){
+  div.input-block input {
+  font-weight: 500;
+  font-size: 16px;
+  color: #495055;
+  width: 328px;
+  height: 52px;
+  padding: 0px;
+  border-radius: 5px;
+  border: 1px solid  #D9D9D9;
+  outline:none;
+  margin-bottom: 50px;
+  background-color: #F8F8F8;
+}
+  div.input-block span.placeholder {
+  position: absolute;
+  margin: 17px 0;
+  padding: 0 4px;
+  font-family: Nunito;
+  color:  #6c757d;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  left: 25px;
+  top: -1px;
+  transition: all 0.2s;
+  transform-origin: 0% 0%;
+  background: none;
+  pointer-events: none;
+}
+
+}
+@media only screen and(min-width: 768px){
+  div.input-block input {
+  font-weight: 500;
+  font-size: 16px;
+  color: #495055;
+  width: 380px;
+  height: 52px;
+  padding: 0px;
+  border-radius: 5px;
+  border: 1px solid  #D9D9D9;
+  outline:none;
+  margin-bottom: 50px;
+  background-color: #F8F8F8;
+}
+  div.input-block span.placeholder {
+  position: absolute;
+  margin: 17px 0;
+  padding: 0 4px;
+  font-family: Nunito;
+  color:  #6c757d;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  left: 25px;
+  top: -1px;
+  transition: all 0.2s;
+  transform-origin: 0% 0%;
+  background: none;
+  pointer-events: none;
+}
+}
