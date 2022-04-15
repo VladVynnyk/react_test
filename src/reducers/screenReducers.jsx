@@ -1,11 +1,13 @@
-import {createStore, applyMiddleware, combineReducers} from "redux";
-import thunk from 'redux-thunk';
-import {composeWithDevTools} from "redux-devtools-extension";
-import {screenSizeReducer} from "./reducers/screenReducers";
-import {positionsReducer, userListReducer} from "./reducers/requestsReducers";
+import {
+    MOBILE_SCREEN_SIZE,
+    TABLET_SCREEN_SIZE,
+    LAPTOP_SCREEN_SIZE,
+    DESKTOP_SCREEN_SIZE,
 
-let initialState = { /*mobileScreenData:{
-    users:[
+} from "../constants/screenConstants";
+
+export const screenSizeReducer = (state={
+    mobileScreenData:{users:[
         {
             username:'Salvador Stewart Flynn Thomas Salva...',
             description: "Leading specialist of the department a...",
@@ -42,9 +44,7 @@ let initialState = { /*mobileScreenData:{
             email: 'Simon@gmail.com',
             phone:'+38 (098) 278 44 00'
         },
-    ]
-    },
-    tabletScreenData:{
+    ]}, tabletScreenData: {
         users:[
             {
                 username:'Salvador Stewart Flynn Thomas Salva...',
@@ -82,10 +82,7 @@ let initialState = { /*mobileScreenData:{
                 email: 'Simon@gmail.com',
                 phone:'+38 (098) 278 44 00'
             },
-        ]
-    },
-    laptopScreenData:{
-        users:[
+        ]}, laptopScreenData: {users:[
             {
                 username:'Salvador Stewart Flynn Thomas...',
                 description: "Frontend Developer Frontend ...",
@@ -122,10 +119,7 @@ let initialState = { /*mobileScreenData:{
                 email: 'Simon@gmail.com',
                 phone:'+38 (098) 278 44 00'
             },
-        ]
-    },
-    desktopScreenData:{
-        users:[
+        ]}, desktopScreenData: {users:[
             {
                 username:'Salvador Stewart Flynn Thomas Salva Salve...',
                 description: "Leading specialist of the department of cent...",
@@ -162,16 +156,18 @@ let initialState = { /*mobileScreenData:{
                 email: 'Simon@gmail.com',
                 phone:'+38 (098) 278 44 00'
             },
-        ]
-    },*/}
-const reducer = (combineReducers({
-    screenReducer:screenSizeReducer,
-    usersReducer: userListReducer,
-    positionsReducer: positionsReducer,
-}))
-
-const middleware = [thunk]
-
-const store = createStore(reducer, initialState, composeWithDevTools(applyMiddleware(...middleware)))
-
-export default store;
+        ]}}, action) => {
+    switch(action.type){
+        case MOBILE_SCREEN_SIZE:
+            /*return state.mobileScreenData*/
+            return {mobileScreenData: {}}
+        case TABLET_SCREEN_SIZE:
+            return state.tabletScreenData
+        case LAPTOP_SCREEN_SIZE:
+            return state.laptopScreenData
+        case DESKTOP_SCREEN_SIZE:
+            return state.desktopScreenData
+        default:
+            return state
+    }
+}

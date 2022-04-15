@@ -13,32 +13,40 @@
   width: 242px;
   height:214px;
   margin:0 auto;
+  /*display: flex;
+  justify-content: center;*/
+}
+.portrait{
+
 }
 .name{
   /*margin-top: 20px;
   margin-bottom: 20px;*/
+  white-space: nowrap;
   padding: 0;
   position:relative;
   top:-8px;
   margin-top: 20px;
   margin-bottom: 20px;
+  text-align: center;
 }
 .description{
+  white-space: nowrap;
   position:relative;
-  top:-6px;
+  top:-8px;
 }
 .email{
   position:relative;
-  top:-6px;
+  top:-8px;
 }
 .phoneNumber{
   position:relative;
-  top:-6px;
+  top:-8px;
 }
 //Showing text with hover
 .hovertext {
   position: relative;
-  top:-6px;
+  top:-8px;
 }
 .hovertext:hover{
   cursor:pointer;
