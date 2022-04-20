@@ -2,7 +2,7 @@ import {createStore, applyMiddleware, combineReducers} from "redux";
 import thunk from 'redux-thunk';
 import {composeWithDevTools} from "redux-devtools-extension";
 import {screenSizeReducer} from "./reducers/screenReducers";
-import {positionsReducer, userListReducer} from "./reducers/requestsReducers";
+import {positionsReducer, registerReducer, userListReducer} from "./reducers/requestsReducers";
 
 let initialState = { /*mobileScreenData:{
     users:[
@@ -168,6 +168,7 @@ const reducer = (combineReducers({
     screenReducer:screenSizeReducer,
     usersReducer: userListReducer,
     positionsReducer: positionsReducer,
+    registerReducer: registerReducer,
 }))
 
 const middleware = [thunk]

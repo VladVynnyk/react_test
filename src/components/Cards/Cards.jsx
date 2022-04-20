@@ -15,24 +15,37 @@ const  Cards = () => {
 
     let dispatch = useDispatch()
     const usersReducer = useSelector(state => state.usersReducer)
-    const {loading, users, error} = usersReducer
+    const {loading, users, error, totalPages} = usersReducer
+
     useEffect(()=>{
         dispatch(userListAction(pages))
     }, [dispatch])
 
     function clickHandler(){
-        setPages(pages += 1)
-        console.log(pages)
-        /*fetch(`https://frontend-test-assignment-api.abz.agency/api/v1/users?page=${pages}&count=6`)
+        let page =0;
+        page = pages;
+        page+=1;
+        if(totalPages<=pages){
+            console.log("Last page")
+            dispatch(userListAction(totalPages))
+        }
+        else{
+            setPages(pages += 1)
+            console.log(pages)
+            dispatch(userListAction(pages))}
+
+        /*const {data} = fetch(`https://frontend-test-assignment-api.abz.agency/api/v1/users?page=${pages}&count=6`)
             .then(function(response)
                 { return response.json(); })
             .then(function(data)
                 { console.log(data);
-        if(data.success) { }// process success response }
+        if(data.success) { }   // process success response }
             else { // proccess server errors } })
-
-                }})*/
-         dispatch(userListAction(pages))
+            }})
+        if(data.success === false){
+            dispatch(userListAction(pages-1))
+        }
+        else dispatch(userListAction(pages))*/
     }
     return (
         <div className={classes.container}>
@@ -43,13 +56,13 @@ const  Cards = () => {
                     : window.innerWidth>=768 && window.innerWidth<=1024 ? tabletScreenData.users.map(card => (<Card className={classes.card} photo={photo} name={card.username} description={card.description} email={card.email} phoneNumber={card.phone}></Card>))
                             : window.innerWidth>=1024 && window.innerWidth <= 2055 ? laptopScreenData.users.map(card => (<Card className={classes.card} photo={photo} name={card.username} description={card.description} email={card.email} phoneNumber={card.phone}></Card>))
                                 :desktopScreenData.users.map(card => (<Card className={classes.card} photo={photo} name={card.username} description={card.description} email={card.email} phoneNumber={card.phone}></Card>))}*/}
-                   {loading ? <h2>Loading...</h2>
+                    {loading ? <h2>Loading...</h2>
                         : error ? <h3>{error}</h3>
                             : users.map(user => (<Card className={classes.card} key={user.id} photo={user.photo} name={user.name} description={user.position} email={user.email} phoneNumber={user.phone}/>))}
                 </div>
 
             </div>
-        <Button text={"Show more"} className={classes.button} click={clickHandler}></Button>
+        <Button text={"Show more"} styles={totalPages<=pages ? "disabledButton" : "button"} disabled={totalPages<=pages ? "disabled" : ""} click={clickHandler}></Button>
         </div>
     );
 };
