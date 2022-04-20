@@ -40,6 +40,10 @@
   position:absolute;
   left:-100px;
 }
+.button{
+  position:absolute;
+  button:25px;
+}
 @media only screen and (min-width: 360px){
   .container{
   margin: 0 auto;
@@ -71,10 +75,6 @@
   position:relative;
   left:5px;
   text-align: left;
-}
-.button{
-  position:relative;
-  button:25px;
 }
 }
 @media only screen and (min-width: 768px){

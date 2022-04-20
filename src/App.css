@@ -34,7 +34,8 @@
 }
 #button1{
     position:relative;
-    bottom:32px;
+    bottom:-125px;
+    left: -112px;
 }
 #content1{
     margin:0;

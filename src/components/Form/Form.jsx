@@ -130,12 +130,12 @@ const Form = () => {
                                 : positions.map(position => <RadioButton label={position.name} id={position.id} value={position.id} name={"radio1"} onChange={e=>positionHandler(e)}/>)}
                         </div>
                     {/*<FileInput id={"fileInput1"}/>*/}
-                    <input type="file" style={{position:"relative", top:"47px"}} onChange={e => photoHandler(e)}/>
-                    <Button text={"Sign up"} type={"submit"} styles={!formValid ? "disabledButton" : "button"} id={"button1"} disabled={!formValid ? "disabled" : ""} style={{position:'absolute', top:"100px"}}/>
+                    <input type="file" style={{position:"relative", top:"47px", marginBottom:"50px"}} onChange={e => photoHandler(e)}/>
+                    <Button id={"button1"} text={"Sign up"} type={"submit"} styles={!formValid ? "disabledButton" : "button"} id={"button1"} disabled={!formValid ? "disabled" : ""} className={classes.button}/>
                 </form>
                 </div>
             <br/>
-            <Button text={"Sign up"} type={"submit"} style={!formValid ? "disabledButton" : "button"} id={"button1"} disabled={!formValid ? "disabled" : ""}/>
+            {/*<Button text={"Sign up"} type={"submit"} style={!formValid ? "disabledButton" : "button"} id={"button1"} disabled={!formValid ? "disabled" : ""}/>*/}
         </div>
     );
 };
