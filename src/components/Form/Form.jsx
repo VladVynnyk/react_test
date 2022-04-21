@@ -4,7 +4,6 @@ import Input from "../UI/Input/Input";
 import Button from "../UI/Button/Button";
 import "./Form.css";
 import RadioButton from "../UI/Radio button/RadioButton";
-import FileInput from "../UI/InputForFile/FileInput";
 import {useDispatch, useSelector} from "react-redux";
 import {positionsAction, registerAction} from "../../actions/requestsActions";
 
@@ -111,7 +110,7 @@ const Form = () => {
         <div className={classes.container}>
             <div className={classes.title} >Working with POST request</div>
             <div className={classes.form}>
-                <form onSubmit={/*registerAction(name, email, phone, positions.name, positions.id)*/ e=>submitForm(e)}>
+                <form onSubmit={e=>submitForm(e)}>
                     <Input placeholder={"Your name"} name={"name"} onBlur={e=>blurHandler(e)} value={name} onChange={e=>nameHandler(e)} value={name} className={classes.input}/>
                     {(nameDirty && nameError) && <div style={{color:'red', position:'relative', left:'300px', top:'-45px'}}>{nameError}</div>}
                     <Input placeholder={"Email"} name={"email"} type={"email"} onBlur={e=>blurHandler(e)} onChange={e=>emailHandler(e)} value={email} className={classes.input}/>
@@ -121,10 +120,6 @@ const Form = () => {
 
                         <div className={classes.radioForm}>
                             <div className={classes.titleForRadioForm}>Select your position</div>
-                           {/*<RadioButton id={"radio1"} name={"radio"} label={"Frontend developer"}/>
-                            <RadioButton id={"radio2"} name={"radio2"} label={"Backend developer"}/>
-                            <RadioButton id={"radio3"} name={"radio3"} label={"Designer"}/>
-                            <RadioButton id={"radio4"} name={"radio4"} label={"QA"}/>*/}
                              {loading ? <h2>Loading...</h2>
                             : error ? <h3>{error}</h3>
                                 : positions.map(position => <RadioButton label={position.name} id={position.id} value={position.id} name={"radio1"} onChange={e=>positionHandler(e)}/>)}
@@ -135,7 +130,6 @@ const Form = () => {
                 </form>
                 </div>
             <br/>
-            {/*<Button text={"Sign up"} type={"submit"} style={!formValid ? "disabledButton" : "button"} id={"button1"} disabled={!formValid ? "disabled" : ""}/>*/}
         </div>
     );
 };

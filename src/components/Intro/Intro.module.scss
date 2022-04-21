@@ -1,39 +1,8 @@
-.title{
-  font-size: 40px;
-  font-weight: 400;
-  line-height: 40px;
-  color:#F8F8F8;
-}
-.subtitle{
-  font-size: 16px;
-  font-weight: 400;
-  color:#F8F8F8;
-  line-height: 26px;
-  margin-top: 20px;
-  margin-bottom: 32px;
-}
-.container{
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 380px;
-  height: 323px;
-  position:relative;
-  bottom: 492px;
-  margin: 0 auto;
-  z-index: 2;
-}
-.background{
-  width:100%;
-  height: auto;
-  max-width: 1170px;
-  filter: brightness(50%);
-  z-index: 1;
-}
 .button{
   position:relative;
   top:-30px;
 }
-
+/*Settings for different screen sizes*/
 @media only screen and (min-width: 360px){
   .background{
   width:100%;
